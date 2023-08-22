@@ -46,7 +46,7 @@ body {
 }
 
 .fondo {
-    background-color: #001d31;
+    background-color: rgb(0,0,0);
     
 }
 
@@ -54,41 +54,35 @@ body {
 /*  menú */
 .topnav {
    overflow: hidden;
+   background-color: rgb(43, 14, 102);
   }
 
-.topnav ul {
-    list-style-type: none;
-    margin: 0px;
-    padding: 0px;
-    top: 0px;
-    width: 100%;
-    display: inline;
-    position: fixed;
-    z-index: 1000;
-    background-color: rgb(43, 14, 102);
-}
-
-.topnav li {
+.topnav a {
     float: left;
-    border-right: 1px solid #00be67;
-}
-
-.topnav li a {
     display: block;
     color: #F500BD;
     text-align: center;
     padding: 14px 16px;
     font-family: Orbitron;
     text-decoration: none;
+    font-size: 17px;
     font-weight: bold;
+    /*
+    position: fixed;
+    z-index: 1000;
+    */
 }
 
-.topnav li a:hover:not(.active) {
+.topnav a:not(.final) {
+    border-right: 1px solid #00be67;
+}
+
+.topnav a:hover:not(.active) {
     background-color: #F500BD;
     color: #000000;
 }
 
-.topnav .active {
+.topnav a.active {
     background-color: #00a1d5;
 }
 
@@ -115,7 +109,12 @@ body {
 }
 
 .fondo-cudricula {
-    background-color: #DFDBE5;
+    background-color: rgba(245, 0, 189, 0.30);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.4'%3E%3Cpath opacity='.5' d='M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9z'/%3E%3Cpath d='M6 5V0H5v5H0v1h5v94h1V6h94V5H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+.fondo-cudricula-negro {
+    background-color: rgba(0, 0, 0, 1);
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.4'%3E%3Cpath opacity='.5' d='M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9z'/%3E%3Cpath d='M6 5V0H5v5H0v1h5v94h1V6h94V5H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 }
 
@@ -154,6 +153,11 @@ body {
     color: white;
   }
 
+  .hero-text h1 {
+    font-size: 1000%;
+    /* background-color: #F500BD; */
+  }
+
 
 
 /* hero image Calculamos la pantalla para definir la altura en PX*/
@@ -165,7 +169,7 @@ body {
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1080px) {
-    .hero-image { height: 743px;}
+    .hero-image { height: 670px;}
 
 }
 /* end - Hero image */
@@ -175,6 +179,67 @@ body {
 img {
     max-width: 100%;
     height: auto;
+      
+}
+
+.banner {
+    width: 100%;
+    height: 200px;
+    /* background-image: url(img/banner.png); */
+    background-image: url(https://i.postimg.cc/fLs8KRZh/banner.png);
+    background-size: cover;
+    border: 1px solid black;
+}
+
+.temaimg {
+    display: block;
+    margin-left: 10%;
+    margin-right: 10%;
+    width: 80%;
+}
+.recuadro {
+    border: 3px solid #ddd;
+    border-radius: 4px;
+    border-style:ridge;
+    padding: 5px;
+    margin-bottom: 2%;
+}
+
+.recuadro:hover {
+    transform: scaleX(-1);
+    
+    /* box-shadow: 20px 20px 5px 1px rgba(245, 0, 189, 0.9);
+    box-shadow: 20px 20px 5px 1px rgba(255, 255, 255, 0.9);*/
+    
+}
+
+.texto-encuadre {
+    padding-top: 2px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.texto-centro {
+    text-align: left;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.titulo-flotante {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-top: 50px;
+    color:rgb(245, 0, 189);
+}
+
+
+p {
+    font-family: Space Mono;
+    color:#00be67;
+    font-size:large;
 }
 
 h1, h4 {
@@ -184,15 +249,35 @@ h1, h4 {
 }
 
 h2, h3 {
-    color: #001d31;
+    /* color: #001d31; */
+    color:#F500BD ;
     text-align: center;
+    font-family: Orbitron;
 }
 
 h5 {
     color: #fff
 }
 
+.link-destacado {
+    text-decoration: none;
+    color:#F500BD;
+
+}
+
+.titulo-separado {
+    margin-top: 2%;
+    margin-bottom: 5%;
+    color: #F500BD;
+}
+
+.img-descripcion {
+    color: #F500BD;
+    
+}
+
 #footer {
+    margin-top: 2%;
     padding-top: 10px;
     padding-bottom: 10px;
     background-color: rgb(43, 14, 102); 
@@ -209,11 +294,6 @@ h5 {
          height: 330px;
     }
 
-    img {
-        max-width: 20%;
-        height: auto;
-    }
-
     #footer {
         padding-top: 2px;
         padding-bottom: 2px;
@@ -221,15 +301,13 @@ h5 {
 
   }
 
- 
-
-   /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
 @media screen and (max-width: 600px) {
     
-    /* para que funcione el ocultar los elementos debemos sustituir la etiqueta "a" por el "li", por que conformamos el menú en base a lso li */
-    .topnav li:not(:first-child) {display: none;}
+/* para que funcione el ocultar los elementos debemos sustituir la etiqueta "a" por el "li", por que conformamos el menú en base a lso li */
+    .topnav a:not(.active) {display: none;}
 
-    .topnav li .icon {
+    .topnav a.icon {
       display: block;
       float: right;
          }
@@ -239,8 +317,7 @@ h5 {
   @media screen and (max-width: 600px) {
     /* #ocultar {display: none; } */
     .topnav.responsive {position: relative;}
-    
-    .topnav.responsive li a.icon {
+    .topnav.responsive a.icon {
       position: absolute;
       right: 0;
       top: 0;
